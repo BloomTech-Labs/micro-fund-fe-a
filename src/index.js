@@ -62,10 +62,10 @@ function App() {
           <Route path="/landing" component={LandingPage} />
           <Route path="/partnerAdmins" component={PartnerAdmins} />
           {/* Next 4 paths to be secure paths. Delete and re-enable SecureRoute */}
-          <Route path="/example-list" component={ExampleListPage} />
+          {/* <Route path="/example-list" component={ExampleListPage} />
           <Route path="/profile-list" component={ProfileListPage} />
           <Route path="/datavis" component={ExampleDataViz} />
-          <Route path="/AppCard" component={AppCard} />
+          <Route path="/AppCard" component={AppCard} /> */}
           {/* any of the routes you need secured should be registered as SecureRoutes */}
 
           <SecureRoute
@@ -74,10 +74,10 @@ function App() {
             component={() => <HomePage LoadingComponent={LoadingComponent} />}
           />
 
-          {/* <SecureRoute path="/example-list" component={ExampleListPage} />
+          <SecureRoute path="/example-list" component={ExampleListPage} />
           <SecureRoute path="/profile-list" component={ProfileListPage} />
           <SecureRoute path="/datavis" component={ExampleDataViz} />
-          <SecureRoute path="/AppCard" component={AppCard} /> */}
+          <SecureRoute path="/AppCard" component={AppCard} />
         </Switch>
       </QueryClientProvider>
     </Security>
