@@ -14,6 +14,12 @@ const getExampleData = () => {
     .then(response => response.data);
 };
 
+const getPartnerAdminData = () => {
+  return axios
+    .get(`https://microfund-be-a.herokuapp.com/orgs/all`)
+    .then(response => response.data);
+};
+
 const getAuthHeader = authState => {
   if (!authState.isAuthenticated) {
     throw new Error('Not authenticated');
@@ -49,4 +55,10 @@ const getProfileData = authState => {
   }
 };
 
-export { sleep, getExampleData, getProfileData, getDSData };
+export {
+  sleep,
+  getExampleData,
+  getPartnerAdminData,
+  getProfileData,
+  getDSData,
+};

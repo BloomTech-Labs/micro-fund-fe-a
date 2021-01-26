@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import logo from '../../../images/microLogo.png';
 
 const RenderExampleListPage = props => (
   <div>
+    <div>
+      <img src={logo} alt="Micro Fund" />
+    </div>
     {props.data.map(item => (
       <figure key={item.id}>
         <img src={item.thumbnailUrl} alt={item.title} />
