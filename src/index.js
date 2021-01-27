@@ -24,6 +24,7 @@ import { LoadingComponent } from './components/common';
 import AppCard from './components/pages/Dashboard/AppCard';
 import Profile from '../src/components/common/Profile';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import PartnerAdmins from './components/pages/Partners/PartnerAdmins';
 
 ReactDOM.render(
   <Router>
@@ -63,6 +64,12 @@ function App() {
           <Route path="/login" component={LoginPage} />
           <Route path="/implicit/callback" component={LoginCallback} />
           <Route path="/landing" component={LandingPage} />
+          <Route path="/partnerAdmins" component={PartnerAdmins} />
+          {/* Next 4 paths to be secure paths. Delete and re-enable SecureRoute */}
+          {/* <Route path="/example-list" component={ExampleListPage} />
+          <Route path="/profile-list" component={ProfileListPage} />
+          <Route path="/datavis" component={ExampleDataViz} />
+          <Route path="/AppCard" component={AppCard} /> */}
           {/* any of the routes you need secured should be registered as SecureRoutes */}
 
           <SecureRoute
