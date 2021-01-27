@@ -5,13 +5,12 @@ import Nav from './Nav';
 function RenderLandingPage(props) {
   return (
     <div>
-      <Nav />
-      <h1>MicroFund</h1>
-      <p>
-        Helping microentrepreneurs around the world to start their businesses.
-      </p>
+      <h1>Welcome to Labs Basic SPA</h1>
       <div>
-        <p>What is MicroFund?</p>
+        <p>
+          This is an example of how we'd like for you to approach page/routable
+          components.
+        </p>
         <p>
           <Link to="/example-list">Example List of Items</Link>
         </p>

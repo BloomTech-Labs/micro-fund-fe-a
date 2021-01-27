@@ -6,7 +6,7 @@ import axiosWithAuth from '../../../utils/axiosWithAuth';
 import DashCard from '../Dashboard/DashCard';
 import Footer from '../../common/Footer';
 import styled from 'styled-components';
-import logo from '../../../images/piggybank.png';
+import logo from '../../../images/microLogo.png';
 import {
   BrowserRouter as Router,
   Route,

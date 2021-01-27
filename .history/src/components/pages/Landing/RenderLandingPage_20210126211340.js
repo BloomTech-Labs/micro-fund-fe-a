@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
-
+import styled from 'styled-components';
 function RenderLandingPage(props) {
   return (
+   
     <div>
-      <Nav />
+       <Nav />
       <h1>MicroFund</h1>
-      <p>
-        Helping microentrepreneurs around the world to start their businesses.
-      </p>
+      <p>Helping microentrepreneurs around the world to start their businesses.</p>
       <div>
-        <p>What is MicroFund?</p>
+        <p>
+          This is an example of how we'd like for you to approach page/routable
+          components.
+        </p>
         <p>
           <Link to="/example-list">Example List of Items</Link>
         </p>

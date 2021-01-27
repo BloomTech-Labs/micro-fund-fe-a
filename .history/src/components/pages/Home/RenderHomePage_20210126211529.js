@@ -13,7 +13,7 @@ import {
   useHistory,
   Switch,
 } from 'react-router-dom';
-
+import Nav from '../Landing/Nav';
 const LandingNav = styled.div`
   display: flex;
   justify-content: space-between;

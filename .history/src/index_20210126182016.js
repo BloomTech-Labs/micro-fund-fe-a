@@ -61,9 +61,9 @@ function App() {
     <Security {...config} onAuthRequired={authHandler}>
       <QueryClientProvider client={queryClient}>
         <Switch>
-          <Route path="/landing" component={LandingPage} />
           <Route path="/login" component={LoginPage} />
           <Route path="/implicit/callback" component={LoginCallback} />
+          <Route path="/landing" component={LandingPage} />
           <Route path="/partnerAdmins" component={PartnerAdmins} />
           {/* Next 4 paths to be secure paths. Delete and re-enable SecureRoute */}
           {/* <Route path="/example-list" component={ExampleListPage} />

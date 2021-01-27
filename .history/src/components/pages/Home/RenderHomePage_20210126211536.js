@@ -13,17 +13,18 @@ import {
   useHistory,
   Switch,
 } from 'react-router-dom';
+import Nav from '../Landing/Nav';
 
-const LandingNav = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  box-shadow: 2px 2px 2px grey;
-  background: #d5f2bb;
-  text-align: center;
-  margin: 10px;
-  padding: 10px;
-`;
+// const LandingNav = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   box-shadow: 2px 2px 2px grey;
+//   background: #d5f2bb;
+//   text-align: center;
+//   margin: 10px;
+//   padding: 10px;
+// `;
 
 const { Paragraph, Title } = Typography;
 
