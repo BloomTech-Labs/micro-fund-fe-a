@@ -7,8 +7,7 @@ import logo from '../images/microLogo.png';
 const StyledDiv = styled.div`
   border-bottom: 3px solid #2fa689;
   display: flex;
-  padding-left: 10%;
-  margin-left: 5%;
+  justify-content: flex-end;
   .log {
     display: flex;
     padding-top: 7rem;
@@ -20,10 +19,9 @@ const StyledDiv = styled.div`
     width: 15px;
   }
   .piggy {
-    width: 8.5rem;
-    height: 8.5rem;
-    margin-right: 30rem;
-    padding-top: 2rem;
+    width: 9.5rem;
+    height: 9.5rem;
+    margin-right: 70vw;
   }
 `;
 
@@ -32,10 +30,9 @@ const Header = () => {
     <StyledDiv classname="head">
       <img
         className="piggy"
-        src="https://image.freepik.com/free-vector/piggy-bank_53876-25494.jpg"
+        src="https://thumbs.dreamstime.com/b/piggy-bank-line-icon-vector-dollar-coin-moneybox-flat-sign-symbols-logo-illustration-isolated-white-background-174959785.jpg"
         alt="pink piggybank with coin"
       />
-      {/* https://files.slack.com/files-pri/TSZCHB482-F01KVGZNH2M/piggybank.png */}
       <Link to="/">
         <div className="log">Home</div>
       </Link>

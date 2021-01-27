@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import logo from '../../../images/microLogo.png';
 import styled from 'styled-components';
 import Header from '../../../styles/headers';
@@ -11,6 +12,7 @@ const PartnerStyle = styled.div`
   width: 90%;
   margin-left: 5%;
   padding-top: 2%;
+  flex-wrap: flex-wrap;
   :hover {
     border: 2px solid #2fa689;
   }
@@ -41,14 +43,14 @@ const PartnerStyle = styled.div`
   }
   h2 {
     color: #2fa689;
-    width: 90%;
+    width: 20rem;
     height: 30%;
     margin-left: 25%;
   }
   h3 {
-    margin-left: 45%;
+    margin-left: 25%;
     color: #2fa689;
-    width: 10rem;
+    width: 30rem;
   }
 `;
 
@@ -67,13 +69,13 @@ const RenderPartnerAdminsPage = props => {
         <PartnerStyle>
           <figure key={item.id}>
             <img className="corp" src={item.thumbnailUrl} alt={item.title} />
-            <h2>{item.name} name</h2>
-            <h2>Organization</h2>
+            <h2>{item.name}</h2>
             <button onClick={handleToggle}>
               <h2 className="butto">click for details</h2>
             </button>
             <figcaption>
-              <h3 className={isActive ? 'hide' : null}>{item.title}</h3>
+              <h3 className={isActive ? 'hide' : null}>{item.phone}</h3>
+              <h3 className={isActive ? 'hide' : null}>{item.address}</h3>
             </figcaption>
           </figure>
         </PartnerStyle>

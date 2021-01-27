@@ -61,7 +61,7 @@ function App() {
           <Route path="/implicit/callback" component={LoginCallback} />
           <Route path="/landing" component={LandingPage} />
           <Route path="/partnerAdmins" component={PartnerAdmins} />
-          {/* Next 4 paths to be secure paths. Delete and re-enable SecureRoute */}
+          {/* Next 4 paths to be secure paths. Delete and re-enable SecureRoute for local editing*/}
           {/* <Route path="/example-list" component={ExampleListPage} />
           <Route path="/profile-list" component={ProfileListPage} />
           <Route path="/datavis" component={ExampleDataViz} />

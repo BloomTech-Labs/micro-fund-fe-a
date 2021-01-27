@@ -7,12 +7,17 @@ import logo from '../../../images/microLogo.png';
 import Header from '../../../styles/headers';
 
 const AppCardStyle = styled.div`
-  box-shadow: 2px 2px 2px grey;
   margin: 10px;
   padding: 10px;
-  background: #d5f2bb;
   box-sizing: boarder-box;
   height: 100%;
+  h1,
+  h2 {
+    color: #2f2d2d;
+  }
+  .UserDescription {
+    color: #2f2d2d;
+  }
 `;
 
 function AppCard() {
@@ -20,11 +25,8 @@ function AppCard() {
     <div>
       <Header></Header>
       <AppCardStyle>
-        <img src={logo} alt="Micro Fund" />
-        <h1>Application Form</h1>
-        <Link to="/">
-          <div>Home</div>
-        </Link>
+        <h1>MicroFund</h1>
+        <h2>Application Form</h2>
         <UserDescription />
 
         <Form />
