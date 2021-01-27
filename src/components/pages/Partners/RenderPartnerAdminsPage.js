@@ -2,23 +2,42 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import logo from '../../../images/microLogo.png';
 import styled from 'styled-components';
+import Header from '../../../styles/headers';
+import { useState } from 'react';
 
 const PartnerStyle = styled.div`
-  border: 3px solid #2fa689;
-  color: #2fa689;
   display: flex;
   padding-left: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 2%;
+  :hover {
+    border: 2px solid #2fa689;
+  }
+  .hide {
+    display: none;
+  }
+  button {
+    display: flex;
+    font-size: 0.5rem;
+    height: 4rem;
+    width: 5rem;
+    margin-left: 2rem;
+    background-color: white;
+    justify-content: center;
+  }
+  .butto {
+    margin-bottom: 3rem;
+    padding-right: 1rem;
+  }
   figure {
     display: inline-flex;
     height: 10rem;
     width: 20%;
   }
   img {
-    width: 100%;
-    height: 100%;
+    width: 9.5rem;
+    height: 9.5rem;
   }
   h2 {
     color: #2fa689;
@@ -33,24 +52,35 @@ const PartnerStyle = styled.div`
   }
 `;
 
-const RenderPartnerAdminsPage = props => (
-  <div>
-    <img src={logo} alt="Micro Fund" />
-    {props.data.map(item => (
-      <PartnerStyle>
-        <figure key={item.id}>
-          <img src={item.thumbnailUrl} alt={item.title} />
-          <h2>{item.name} name</h2>
-          <h2>Organization</h2>
-          <figcaption>
-            <h3>{item.title}</h3>
-          </figcaption>
-        </figure>
-      </PartnerStyle>
-    ))}
-  </div>
-);
+const RenderPartnerAdminsPage = props => {
+  const [isActive, setActive] = useState('false');
 
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+  return (
+    <div>
+      <div id="painful">
+        <Header />
+      </div>
+      {props.data.map(item => (
+        <PartnerStyle>
+          <figure key={item.id}>
+            <img className="corp" src={item.thumbnailUrl} alt={item.title} />
+            <h2>{item.name} name</h2>
+            <h2>Organization</h2>
+            <button onClick={handleToggle}>
+              <h2 className="butto">click for details</h2>
+            </button>
+            <figcaption>
+              <h3 className={isActive ? 'hide' : null}>{item.title}</h3>
+            </figcaption>
+          </figure>
+        </PartnerStyle>
+      ))}
+    </div>
+  );
+};
 export default RenderPartnerAdminsPage;
 
 RenderPartnerAdminsPage.propTypes = {
