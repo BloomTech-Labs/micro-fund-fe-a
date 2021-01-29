@@ -64,8 +64,14 @@ function App() {
           <Route path="/landing" component={LandingPage} />
           <Route path="/login" component={LoginPage} />
           <Route path="/implicit/callback" component={LoginCallback} />
+<<<<<<< HEAD
           <Route path="/partnerAdmins" component={PartnerAdmins} />
           {/* Next 4 paths to be secure paths. Delete and re-enable SecureRoute */}
+=======
+          <Route path="/landing" component={LandingPage} />
+
+          {/* Next 4 paths to be secure paths. Delete and re-enable SecureRoute for local editing*/}
+>>>>>>> 43de9f427b23ca37eb3543f261c1d990615342c5
           {/* <Route path="/example-list" component={ExampleListPage} />
           <Route path="/profile-list" component={ProfileListPage} />
           <Route path="/datavis" component={ExampleDataViz} />
@@ -77,7 +83,7 @@ function App() {
             exact
             component={() => <HomePage LoadingComponent={LoadingComponent} />}
           />
-
+          <SecureRoute path="/partnerAdmins" component={PartnerAdmins} />
           <SecureRoute path="/example-list" component={ExampleListPage} />
           <SecureRoute path="/profile-list" component={ProfileListPage} />
           <SecureRoute path="/datavis" component={ExampleDataViz} />

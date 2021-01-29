@@ -4,29 +4,42 @@ import { LoginPage } from '../components/pages/Login';
 import { Route, Link } from 'react-router-dom';
 import logo from '../images/microLogo.png';
 
-const styledDiv = styled.div`
+const StyledDiv = styled.div`
+  border-bottom: 3px solid #2fa689;
   display: flex;
-  color: #2fa689;
-  border-color: whitesmoke;
-  height: 10vh;
+  justify-content: flex-end;
+  .log {
+    display: flex;
+    padding-top: 7rem;
+    margin-right: 1rem;
+  }
+  .img {
+    display: flex;
+    height: 15px;
+    width: 15px;
+  }
+  .piggy {
+    width: 9.5rem;
+    height: 9.5rem;
+    margin-right: 70vw;
+  }
 `;
 
 const Header = () => {
   return (
-    <styledDiv classname="head">
+    <StyledDiv classname="head">
       <img
         className="piggy"
-        src="https://image.freepik.com/free-vector/piggy-bank_53876-25494.jpg"
+        src="https://thumbs.dreamstime.com/b/piggy-bank-line-icon-vector-dollar-coin-moneybox-flat-sign-symbols-logo-illustration-isolated-white-background-174959785.jpg"
         alt="pink piggybank with coin"
       />
-      {/* https://files.slack.com/files-pri/TSZCHB482-F01KVGZNH2M/piggybank.png */}
-      <Link to="/login">
-        <div>Login</div>
+      <Link to="/">
+        <div className="log">Home</div>
       </Link>
-      {/* <Link to= '/'>
-                <div>Home</div>
-            </Link> */}
-    </styledDiv>
+      <Link to="/login">
+        <div className="log">Login</div>
+      </Link>
+    </StyledDiv>
   );
 };
 
