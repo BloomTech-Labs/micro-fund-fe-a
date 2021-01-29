@@ -32,16 +32,22 @@ const Landingareacontainer = styled.div`
 const Applyimage = styled.img`
   width: 50%;
   height: 50%;
+
 `;
 const Statusimage = styled.img`
   width: 50%;
   height: 50%;
+
+
 `;
 const Moneyimage = styled.img`
   width: 50%;
   height: 50%;
+
+
 `;
 const Landingarea = styled.div`
+
   border: 3px solid gray;
   align-items: center;
   padding: 3em;
@@ -68,7 +74,7 @@ const Landingareathree = styled.div`
   border-radius: 5px;
   margin: 2em;
   font-size: 15px;
-`;
+  `;
 
 const Landingareaheaders = styled.div`
   font-size: 25px;
@@ -81,43 +87,40 @@ function RenderLandingPage(props) {
       <Nav />
       <Landingheader>MicroFund</Landingheader>
       <Landingheaderarea>
-        Helping microentrepreneurs around the world to start their businesses.
+      Helping microentrepreneurs around the world to start their businesses.
       </Landingheaderarea>
       <Landingareacontainer>
-        <Landingarea>
-          <Landingareaheaders>
-            <Applyimage src={Applylogo} />
-            <br />
-            Apply
-          </Landingareaheaders>
-          <br />
-          Apply to receive a grant from an organization to start your business.
-          Pitch a business idea in your application.
-        </Landingarea>
+      <Landingarea>
+        <Landingareaheaders>
+          <Applyimage src={Applylogo}/>
+          <br/>
+        Apply
+        </Landingareaheaders>
+        <br/>
+        Apply to receive a grant from an organization to start your business. Pitch a business idea in your application.
+      </Landingarea>
         <Landingareatwo>
-          <Landingareaheaders>
-            <Statusimage src={Statuslogo} />
-            <br />
-            Check Status
-          </Landingareaheaders>
-          <br />
-          Check to see if your application has been approved, once it has been
-          approved then you move to the following step.
+        <Landingareaheaders>
+        <Statusimage src={Statuslogo}/>
+        <br/>
+        Check Status
+        </Landingareaheaders>
+        <br/>
+        Check to see if your application has been approved, once it has been approved then you move to the following step.
         </Landingareatwo>
         <Landingareathree>
           <Landingareaheaders>
-            <Moneyimage src={Moneylogo} />
-            <br />
-            Approved Applications
-          </Landingareaheaders>
-          <br />
-          You'll receive a grant from the organization to start your business.
-          <br />
-          You'll also provide regular reports to the organization and receive
-          ongoing support, advice and resources.
+          <Moneyimage src={Moneylogo}/> 
+          <br/>
+        Approved Applications
+        </Landingareaheaders>
+        <br/>
+        You'll receive a grant from the organization to start your business.
+        <br/>
+         You'll also provide regular reports to the organization and receive ongoing support, advice and resources.
         </Landingareathree>
-      </Landingareacontainer>
-
+        </Landingareacontainer>
+    
       <Footer />
     </div>
   );
