@@ -25,6 +25,7 @@ import AppCard from './components/pages/Dashboard/AppCard';
 import Profile from '../src/components/common/Profile';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import PartnerAdmins from './components/pages/Partners/PartnerAdmins';
+import { SignupPage } from './components/pages/Signup';
 
 ReactDOM.render(
   <Router>
@@ -64,12 +65,13 @@ function App() {
           <Route path="/login" component={LoginPage} />
           <Route path="/implicit/callback" component={LoginCallback} />
           <Route path="/landing" component={LandingPage} />
+          <Route path="/signup" component={SignupPage} />
 
           {/* Next 4 paths to be secure paths. Delete and re-enable SecureRoute for local editing*/}
-          {/* <Route path="/example-list" component={ExampleListPage} />
+          <Route path="/example-list" component={ExampleListPage} />
           <Route path="/profile-list" component={ProfileListPage} />
           <Route path="/datavis" component={ExampleDataViz} />
-          <Route path="/AppCard" component={AppCard} /> */}
+          <Route path="/AppCard" component={AppCard} />
           {/* any of the routes you need secured should be registered as SecureRoutes */}
 
           <SecureRoute
@@ -78,10 +80,10 @@ function App() {
             component={() => <HomePage LoadingComponent={LoadingComponent} />}
           />
           <SecureRoute path="/partnerAdmins" component={PartnerAdmins} />
-          <SecureRoute path="/example-list" component={ExampleListPage} />
+          {/* <SecureRoute path="/example-list" component={ExampleListPage} />
           <SecureRoute path="/profile-list" component={ProfileListPage} />
           <SecureRoute path="/datavis" component={ExampleDataViz} />
-          <SecureRoute path="/AppCard" component={AppCard} />
+          <SecureRoute path="/AppCard" component={AppCard} /> */}
         </Switch>
       </QueryClientProvider>
     </Security>
