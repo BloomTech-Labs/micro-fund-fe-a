@@ -62,11 +62,11 @@ function App() {
           <Route path="/landing" component={LandingPage} />
 
           {/* Next 5 paths to be secure paths. Disable secure paths and enable unsecure for local editing*/}
-          <Route path="/example-list" component={ExampleListPage} />
+          {/* <Route path="/example-list" component={ExampleListPage} />
           <Route path="/profile-list" component={ProfileListPage} />
           <Route path="/datavis" component={ExampleDataViz} />
           <Route path="/AppCard" component={AppCard} />
-          <Route path="/partnerAdmins" component={PartnerAdmins} />
+          <Route path="/partnerAdmins" component={PartnerAdmins} /> */}
           {/* any of the routes you need secured should be registered as SecureRoutes */}
 
           <SecureRoute
@@ -74,11 +74,11 @@ function App() {
             exact
             component={() => <HomePage LoadingComponent={LoadingComponent} />}
           />
-          {/* <SecureRoute path="/partnerAdmins" component={PartnerAdmins} />
+          <SecureRoute path="/partnerAdmins" component={PartnerAdmins} />
           <SecureRoute path="/example-list" component={ExampleListPage} />
           <SecureRoute path="/profile-list" component={ProfileListPage} />
           <SecureRoute path="/datavis" component={ExampleDataViz} />
-          <SecureRoute path="/AppCard" component={AppCard} /> */}
+          <SecureRoute path="/AppCard" component={AppCard} />
         </Switch>
       </QueryClientProvider>
     </Security>
