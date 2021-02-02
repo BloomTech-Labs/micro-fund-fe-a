@@ -74,7 +74,6 @@ const Landingareaheaders = styled.div`
   font-size: 25px;
 `;
 //Styling ends
-
 function RenderLandingPage(props) {
   return (
     <div>

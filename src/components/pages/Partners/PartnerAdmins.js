@@ -8,7 +8,6 @@ import { getPartnerAdminData } from '../../../api/index';
 const PartnerAdmins = () => {
   return (
     <List
-      // getItemsData={getExampleData}
       getItemsData={getPartnerAdminData}
       LoadingComponent={() => <div>Loading Items...</div>}
       RenderItems={PartnerAdminsPage}
@@ -17,14 +16,3 @@ const PartnerAdmins = () => {
 };
 
 export default PartnerAdmins;
-{
-  /* <div>
-    <div>
-    <img src={logo} alt = 'Micro Fund'/> 
-    </div>
-
-    <div>
-
-    </div>
-</div> */
-}
