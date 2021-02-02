@@ -11,6 +11,7 @@ const DashCardStyle = styled.div`
   background: #d5f2bb;
   box-sizing: border-box;
   height: 100%;
+  background-color: ${props => props.theme.primaryColor};
 `;
 
 function DashCard() {

@@ -7,6 +7,8 @@ import {
   Switch,
 } from 'react-router-dom';
 import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
+import { ThemeProvider } from 'styled-components';
+import theme from './theme';
 
 import 'antd/dist/antd.less';
 
@@ -26,9 +28,11 @@ import PartnerAdmins from './components/pages/Partners/PartnerAdmins';
 
 ReactDOM.render(
   <Router>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <ThemeProvider theme={theme}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </ThemeProvider>
   </Router>,
   document.getElementById('root')
 );
