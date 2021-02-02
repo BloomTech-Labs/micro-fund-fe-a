@@ -2,13 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../../../styles/headers';
 import Organization from './Organization';
+import Nav from '../Landing/Nav';
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+  border-bottom: 3px solid gray;
+`;
 
 const RenderPartnerAdminsPage = props => {
   return (
     <div>
-      <div id="painful">
-        <Header />
-      </div>
+      <StyledDiv id="painful">
+        <Nav />
+      </StyledDiv>
       {props.data.map(item => (
         /*Styles and structure imported from Organization component */
         <Organization
