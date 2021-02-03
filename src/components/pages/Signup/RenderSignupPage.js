@@ -1,10 +1,13 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as yup from 'yup';
+import axios from 'axios';
 import { Button } from 'antd';
 import { Link, useHistory } from 'react-router-dom';
+import { axiosWithAuth } from '../../../utils/axiosWithAuth';
 import styled from 'styled-components';
 import Nav from '../Landing/Nav';
 import logo from '../../../images/piggybank.png';
+import signupFormSchema from './signupFormSchema';
 
 const SignupHeader = styled.div`
   border-top: 5px solid gray;
@@ -24,6 +27,11 @@ const SignupAreaContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   align-content: space-between;
+  .error {
+    color: red;
+    font-size: 15px;
+    text-align: center;
+  }
 `;
 
 const SignupHeaders = styled.div`
@@ -83,7 +91,12 @@ function RenderSignupPage(props) {
     email: '',
     password: '',
   };
-  // initalize errors
+
+  const initialErrors = {
+    username: '',
+    email: '',
+    password: '',
+  };
 
   const initialDisabled = true;
   const initialUsers = [];
@@ -93,12 +106,46 @@ function RenderSignupPage(props) {
 
   const [disabled, setDisabled] = useState(initialDisabled);
   const [users, setUsers] = useState(initialUsers);
-  // setstate for errors
+  const [errors, setErrors] = useState(initialErrors);
 
-  const postNewUser = () => {};
+  const postNewUser = () => {
+    axios
+      .post(``, newUser)
+      .then(res => {
+        console.log('postNewUser -> res.data', res);
+        localStorage.setItem('token', res.data.token);
+        push(`/login`);
+
+        setUsers([...users, newUser]);
+        setValues(initialValues);
+        console.log(newUser);
+      })
+      .catch(err => console.log(err));
+    console.log('postNewUser -> newUser', newUser);
+  };
 
   const inputChange = evt => {
     const { name, value } = evt.target;
+
+    yup
+      .reach(signupFormSchema, name)
+      .validate(value)
+      .then(valid => {
+        setErrors({
+          ...errors,
+          [name]: '',
+        });
+      })
+      .catch(err => {
+        setErrors({
+          ...errors,
+          [name]: err.errors[0],
+        });
+      });
+    setValues({
+      ...values,
+      [name]: value,
+    });
   };
 
   const newUser = {
@@ -112,6 +159,12 @@ function RenderSignupPage(props) {
     evt.preventDefault();
     postNewUser(newUser);
   };
+
+  useEffect(() => {
+    signupFormSchema.isValid(values).then(valid => {
+      setDisabled(!valid);
+    });
+  }, [values]);
 
   return (
     <div>
@@ -134,6 +187,7 @@ function RenderSignupPage(props) {
               type="text"
             />
           </SignupHeaders>
+          <div className="error">{errors.username}</div>
           <SignupHeaders>
             Email:
             <SignupInput
@@ -143,6 +197,7 @@ function RenderSignupPage(props) {
               type="email"
             />
           </SignupHeaders>
+          <div className="error">{errors.email}</div>
           <SignupHeaders>
             Password:
             <SignupInput
@@ -152,6 +207,7 @@ function RenderSignupPage(props) {
               type="password"
             />
           </SignupHeaders>
+          <div className="error">{errors.password}</div>
           <JoinButton>
             <Button disabled={disabled}>Join Microfund</Button>
           </JoinButton>
