@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import * as yup from 'yup';
 import { Button } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import Nav from '../Landing/Nav';
 import logo from '../../../images/piggybank.png';
@@ -57,11 +58,16 @@ const LoginButton = styled.div`
   button {
     font-size: 25px;
     padding: 0em 1em 0em 1em;
-    border-color: ${props => props.theme.primaryColor};
+    border: 3px solid ${props => props.theme.primaryColor};
     height: 2em;
     color: ${props => props.theme.primaryColor};
   }
-  color: ${props => props.theme.primaryColor};
+  .link {
+    color: ${props => props.theme.primaryColor};
+  }
+  .link:hover {
+    color: black;
+  }
 `;
 
 const SignupInput = styled.input`
@@ -70,32 +76,94 @@ const SignupInput = styled.input`
 `;
 
 function RenderSignupPage(props) {
+  let signupForm = useRef(null);
+
+  const initialValues = {
+    username: '',
+    email: '',
+    password: '',
+  };
+  // initalize errors
+
+  const initialDisabled = true;
+  const initialUsers = [];
+
+  const [values, setValues] = useState(initialValues);
+  const { push } = useHistory();
+
+  const [disabled, setDisabled] = useState(initialDisabled);
+  const [users, setUsers] = useState(initialUsers);
+  // setstate for errors
+
+  const postNewUser = () => {};
+
+  const inputChange = evt => {
+    const { name, value } = evt.target;
+  };
+
+  const newUser = {
+    username: values.username,
+    email: values.email,
+    password: values.password,
+    id: Date.now(),
+  };
+
+  const submit = evt => {
+    evt.preventDefault();
+    postNewUser(newUser);
+  };
+
   return (
     <div>
       <Nav />
       <SignupHeader>Sign Up</SignupHeader>
       <SignupAreaContainer>
         <Logo alt="Microfund Logo" src={logo} />
-        <form>
+        <form
+          onSubmit={submit}
+          ref={el => {
+            signupForm = el;
+          }}
+        >
           <SignupHeaders>
             Username:
-            <SignupInput name="username" type="text" />
+            <SignupInput
+              value={values.username}
+              onChange={inputChange}
+              name="username"
+              type="text"
+            />
           </SignupHeaders>
           <SignupHeaders>
             Email:
-            <SignupInput name="email" type="email" />
+            <SignupInput
+              value={values.email}
+              onChange={inputChange}
+              name="email"
+              type="email"
+            />
           </SignupHeaders>
           <SignupHeaders>
             Password:
-            <SignupInput name="password" type="password" />
+            <SignupInput
+              value={values.password}
+              onChange={inputChange}
+              name="password"
+              type="password"
+            />
           </SignupHeaders>
           <JoinButton>
-            <Button>Join Microfund</Button>
+            <Button disabled={disabled}>Join Microfund</Button>
           </JoinButton>
         </form>
         <p>already a member of Microfund?</p>
         <LoginButton>
-          <Button to="/login"> Login Here</Button>{' '}
+          <Button>
+            {' '}
+            <Link className="link" to="/login">
+              Login Here
+            </Link>
+          </Button>{' '}
         </LoginButton>
       </SignupAreaContainer>
     </div>
