@@ -29,6 +29,7 @@ const SignupHeaders = styled.div`
   font-size: 25px;
   color: solid gray;
   text-align: right;
+  margin-right: 4.5em;
 `;
 
 const Logo = styled.img`
