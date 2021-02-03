@@ -28,6 +28,7 @@ const SignupAreaContainer = styled.div`
 const SignupHeaders = styled.div`
   font-size: 25px;
   color: solid gray;
+  text-align: right;
 `;
 
 const Logo = styled.img`
@@ -44,6 +45,11 @@ const JoinButton = styled.div`
     margin: 1em;
     height: 2em;
   }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
 `;
 
 const LoginButton = styled.div`
@@ -59,7 +65,7 @@ const LoginButton = styled.div`
 
 const SignupInput = styled.input`
   border: 2px solid gray;
-  margin: 0.5em 0;
+  margin: 0.5em;
 `;
 
 function RenderSignupPage(props) {
@@ -70,12 +76,18 @@ function RenderSignupPage(props) {
       <SignupAreaContainer>
         <Logo alt="Microfund Logo" src={logo} />
         <form>
-          <SignupHeaders>Username:</SignupHeaders>
-          <SignupInput name="username" type="text" />
-          <SignupHeaders>Email:</SignupHeaders>
-          <SignupInput name="email" type="email" />
-          <SignupHeaders>Password:</SignupHeaders>
-          <SignupInput name="password" type="password" />
+          <SignupHeaders>
+            Username:
+            <SignupInput name="username" type="text" />
+          </SignupHeaders>
+          <SignupHeaders>
+            Email:
+            <SignupInput name="email" type="email" />
+          </SignupHeaders>
+          <SignupHeaders>
+            Password:
+            <SignupInput name="password" type="password" />
+          </SignupHeaders>
           <JoinButton>
             <Button>Join Microfund</Button>
           </JoinButton>
