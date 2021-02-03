@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'antd';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/microLogo.png';
 import styled from 'styled-components';
@@ -28,7 +29,7 @@ function RenderSignupPage(props) {
           <h4>Password:</h4>
           <input name="password" type="password" />
 
-          <button>Join Microfund</button>
+          <Button>Join Microfund</Button>
         </form>
         <p>already a member of Microfund?</p>
         <h3>
