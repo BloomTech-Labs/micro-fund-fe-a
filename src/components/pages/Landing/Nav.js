@@ -38,6 +38,7 @@ export default function Nav() {
         <StyledLink to="/landing">About </StyledLink>
         <StyledLink to="/login">Sign In/Sign Up </StyledLink>
         <StyledLink to="/login">Apply </StyledLink>
+        <StyledLink to="/partnerAdmins">Partners</StyledLink>
       </LinkContainer>
     </NavbarContainer>
   );
