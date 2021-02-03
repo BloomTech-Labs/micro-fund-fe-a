@@ -6,7 +6,7 @@ The Labs 30 engineering team was the second team to inherit the MicroFund Java S
 
 ### Melissa Cela 
 #### FrontEnd Engineer /  UX/UI
-<div style="width: 55%;">
+<div style="width: 300px;">
 <img src= "https://avatars.githubusercontent.com/u/66797764?s=460&u=06d6fe06c9b9865dde761975b6f31ac2116541dc&v=4"/>
 <br>
 <a>https://www.linkedin.com/in/melissa-cela/</a>
@@ -14,7 +14,7 @@ The Labs 30 engineering team was the second team to inherit the MicroFund Java S
 
 ### Sam Lalli 
 #### FrontEnd Engineer / UX/UI
-<div style="width: 55%;">
+<div style="width: 300px;">
 <img src='https://avatars.githubusercontent.com/u/68877448?s=460&u=11601e29bf7de2db28be81514bdb143a522e5b74&v=4'/>
 <br>
 <a>https://www.linkedin.com/in/samlalli/</a>
@@ -22,7 +22,7 @@ The Labs 30 engineering team was the second team to inherit the MicroFund Java S
 
 ### Miah Davis 
 #### FrontEnd Engineer / UX/UI
-<div style="width: 55%;">
+<div style="width: 300px;">
 <img src='https://avatars.githubusercontent.com/u/67933996?s=460&u=8dc165a3c3ced8b242eb285c94b0c841cf04762d&v=4'/>
 <br>
 <a>https://www.linkedin.com/in/miah-davis/</a>
@@ -30,7 +30,7 @@ The Labs 30 engineering team was the second team to inherit the MicroFund Java S
 
 ### Danny Hoesle 
 #### FrontEnd Engineer / UX/UI
-<div style="width: 55%;">
+<div style="width: 300px;">
 <img src='https://avatars.githubusercontent.com/u/64494628?s=460&u=a6ec8c4b01c9c9d6f0ed70a37413a854f199f4a6&v=4'/>
 <br>
 <a>https://www.linkedin.com/in/daniel-hoesle/</a>
@@ -38,7 +38,7 @@ The Labs 30 engineering team was the second team to inherit the MicroFund Java S
 
 ### Karmen Durbin 
 #### Technical Documentation Writer / Product Planning
-<div style="width: 55%;">
+<div style="width: 300px;">
 <img src='https://avatars.githubusercontent.com/u/24881977?s=460&u=81369a28fa746f8dd902fe791ebecd4f0b8af4ef&v=4'/>
 <br>
 <a>https://www.linkedin.com/in/karmen-kristina-durbin/</a>
