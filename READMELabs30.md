@@ -1,6 +1,48 @@
 # MicroFund Labs 30 
 
-The Labs 30 engineering team was the second team to inherit the MicroFund Java Spring Application. Our team consists of 5 Engineers; Melissa Cela, Sam Lalli, Miah Davis, Danny Hoesle, and Karmen Durbin. 
+The Labs 30 engineering team was the second team to inherit the MicroFund Java Spring Application. The main purpose of this application is to connect Micro entrepreneurs with partner admins who can then accept applications for funding via the application. The main admin is the owner of the application who is providing the platform for the exchange of funding to take place. 
+
+## Team Members
+
+### Melissa Cela 
+#### FrontEnd Engineer /  UX/UI
+<div style="width: 55%;">
+<img src= "https://avatars.githubusercontent.com/u/66797764?s=460&u=06d6fe06c9b9865dde761975b6f31ac2116541dc&v=4"/>
+<br>
+<a>https://www.linkedin.com/in/melissa-cela/</a>
+</div>
+
+### Sam Lalli 
+#### FrontEnd Engineer / UX/UI
+<div style="width: 55%;">
+<img src='https://avatars.githubusercontent.com/u/68877448?s=460&u=11601e29bf7de2db28be81514bdb143a522e5b74&v=4'/>
+<br>
+<a>https://www.linkedin.com/in/samlalli/</a>
+</div>
+
+### Miah Davis 
+#### FrontEnd Engineer / UX/UI
+<div style="width: 55%;">
+<img src='https://avatars.githubusercontent.com/u/67933996?s=460&u=8dc165a3c3ced8b242eb285c94b0c841cf04762d&v=4'/>
+<br>
+<a>https://www.linkedin.com/in/miah-davis/</a>
+</div>
+
+### Danny Hoesle 
+#### FrontEnd Engineer / UX/UI
+<div style="width: 55%;">
+<img src='https://avatars.githubusercontent.com/u/64494628?s=460&u=a6ec8c4b01c9c9d6f0ed70a37413a854f199f4a6&v=4'/>
+<br>
+<a>https://www.linkedin.com/in/daniel-hoesle/</a>
+</div>
+
+### Karmen Durbin 
+#### Technical Documentation Writer / Product Planning
+<div style="width: 55%;">
+<img src='https://avatars.githubusercontent.com/u/24881977?s=460&u=81369a28fa746f8dd902fe791ebecd4f0b8af4ef&v=4'/>
+<br>
+<a>https://www.linkedin.com/in/karmen-kristina-durbin/</a>
+</div>
 
 ## Main Updates To Features
 
@@ -9,31 +51,26 @@ Key updated features: Improved the overall user experience of the application. O
 ### Technologies Used
 
 React Query, ThemeProvider, Java Spring. 
+<ul>Team Efforts:</ul> 
+<li>Agile Planning Methodology</li>
+<li>Wire Framing</li>
+<li>Engineering Architecture</li>
+<li>Feature Planning</li>
+<li>Application Debugging</li>
+<li>UX/UI Updates</li>
+<li>FrontEnd Design</li>
+<li>Generation Of User FLow & User Stories</li>
 
-| Melissa     | Sam          | 
-| ----------- | -----------  |
-| FE Engineer | FE Engineer  |
-| UX/UI       | UX/UI        |
-
-| Miah        | Danny        | 
-| ----------- | -----------  |
-| FE Engineer | FE Engineer  |
-| UX/UI       | UX/UI        |
-
-| Karmen      | Jasim        | 
-| ----------- | -----------  |
-|Technical Docs| Team Project Lead  |
-| UX/UI       | TPL        |
 
 
 
 ## Configuration Instructions
-You will need to install any dependencies you need when you start up the app. Be sure you have a .env file with the correct environment variables. These should connect to OKTA. 
+Please check the package.json file. You will need to install any dependencies you need when you start up the app. Another requirement is the .env file with the correct environment variables. These should connect to OKTA for authentication purposes. 
 
 
 ## Operation and Installation Instructions
 
-This application is running React and React Query for the frontend of the application. You will need to have your environment set up to run the dependencies you see in the package.json file.  
+This application is running React and React Query for the frontend of the application. You will need to have your environment set up to run the dependencies you see in the package.json file. You can install required dependencies in the terminal. Be sure to install the correct 
 
 
 ## Known Bugs
@@ -56,9 +93,9 @@ When troubleshooting this application refer to OKTA docs first. All authenticati
 
 ## Built With
 
-* [React Query](https://react-query.tanstack.com/overview) - The web framework use
+* [React Query](https://react-query.tanstack.com/overview) - The web framework used
 * [Java Spring Boot](https://spring.io/guides) - Restful API development
-* [Maven](https://maven.apache.org/) - Dependency Management
+* [Maven](https://maven.apache.org/) - Dependency (jar) Management
 
 
 ## Contributing
@@ -76,6 +113,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
+* Stake Holder
+* Frank Fusco  
 * Project TPL 
 * Jasim Rashid
 
