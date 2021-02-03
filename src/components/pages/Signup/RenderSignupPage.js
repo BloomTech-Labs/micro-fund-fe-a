@@ -84,8 +84,6 @@ const SignupInput = styled.input`
 `;
 
 function RenderSignupPage(props) {
-  let signupForm = useRef(null);
-
   const initialValues = {
     username: '',
     email: '',
@@ -110,7 +108,7 @@ function RenderSignupPage(props) {
 
   const postNewUser = () => {
     axios
-      .post(``, newUser)
+      .post(`insert login endpoint here`, newUser)
       .then(res => {
         console.log('postNewUser -> res.data', res);
         localStorage.setItem('token', res.data.token);
@@ -172,12 +170,7 @@ function RenderSignupPage(props) {
       <SignupHeader>Sign Up</SignupHeader>
       <SignupAreaContainer>
         <Logo alt="Microfund Logo" src={logo} />
-        <form
-          onSubmit={submit}
-          ref={el => {
-            signupForm = el;
-          }}
-        >
+        <form>
           <SignupHeaders>
             Username:
             <SignupInput
@@ -209,7 +202,9 @@ function RenderSignupPage(props) {
           </SignupHeaders>
           <div className="error">{errors.password}</div>
           <JoinButton>
-            <Button disabled={disabled}>Join Microfund</Button>
+            <Button onClick={submit} disabled={disabled}>
+              Join Microfund
+            </Button>
           </JoinButton>
         </form>
         <p>already a member of Microfund?</p>
